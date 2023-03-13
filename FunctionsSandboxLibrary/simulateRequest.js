@@ -51,6 +51,7 @@ const getDecodedResultLog = (config, successResult) => {
     let decodedOutput
     switch (config.expectedReturnType) {
       case "uint256":
+        console.log(BigInt("0x" + successResult.slice(2).slice(-64)))
         decodedOutput = BigInt("0x" + successResult.slice(2).slice(-64))
         break
       case "int256":

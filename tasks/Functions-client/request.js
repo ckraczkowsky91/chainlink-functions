@@ -54,6 +54,7 @@ task("functions-request", "Initiates a request from a Functions client contract"
     const requestConfig = getRequestConfig(unvalidatedRequestConfig)
 
     const request = await generateRequest(requestConfig, taskArgs)
+    console.log(request)
 
     // Check that the subscription is valid
     let subInfo
